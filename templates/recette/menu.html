@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!--  <div class="row mt-5 mx-0">-->
+    {% for recette in recettes %}
+      <p class="mx-auto">Nom :{{recette.name}} {{recette.price}}</p>
+      <p>{{recette.ingredients}}</p>
+    {% endfor %}
+<!--  </div>-->
+{% endblock %}

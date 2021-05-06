@@ -1,10 +1,19 @@
 {% extends "base.html" %}
 
 {% block content %}
-<!--  <div class="row mt-5 mx-0">-->
+    <div class="row d-flex justify-content-center mt-5 mx-0">
     {% for recette in recettes %}
-      <p class="mx-auto">Nom :{{recette.name}} {{recette.price}}</p>
-      <p>{{recette.ingredients}}</p>
+        <div class="col-2">
+            <div class="card">
+            <!--<img src="..." class="card-img-top" alt="...">-->
+            <div class="card-body">
+                <h5 class="card-title">{{recette.name}}</h5>
+                <p class="card-text">{{recette.ingredients}}</p>
+                <p class="card-text">{{recette.price}} €</p>
+                <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+            </div>
+        </div>
+        </div>
     {% endfor %}
-<!--  </div>-->
+    </div>
 {% endblock %}
